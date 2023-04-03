@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:watch/pages/drawer_page.dart';
 import 'package:watch/pages/home_page.dart';
 
 void main() {
@@ -32,13 +33,14 @@ class _MyAppState extends State<MyApp> {
             Icon(Icons.chat_sharp),
           ]),
         ),
-        drawer: Drawer(),
+        drawer: DrawerPage(),
         body: TabBarView(children: [
           HomePage(),
-          Container(color: Colors.orange,),
-          Container(color: Colors.red,),
-          Container(color: Colors.black,),
-          Container(color: Colors.blue,),
+          HomePage(),
+          HomePage(),
+          HomePage(),
+          HomePage(),
+
         ]),
       ),
     );
