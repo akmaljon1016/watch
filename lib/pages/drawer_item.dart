@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class DrawerItem extends StatefulWidget {
-  const DrawerItem({Key? key}) : super(key: key);
+  final String text;
+  final IconData icon;
+
+  const DrawerItem({Key? key,required this.text,required this.icon}) : super(key: key);
 
   @override
   State<DrawerItem> createState() => _DrawerItemState();
@@ -17,14 +20,20 @@ class _DrawerItemState extends State<DrawerItem> {
           height: 50,
           child: Row(
             children: [
-              SizedBox(width: 20,),
-              Icon(Icons.notification_add),
-              SizedBox(width: 20,),
-              Text("Bildirishnomalar",style: TextStyle(fontSize:20),)
+              SizedBox(
+                width: 20,
+              ),
+              Icon(widget.icon),
+              SizedBox(
+                width: 20,
+              ),
+              Text(
+                widget.text,
+                style: TextStyle(fontSize: 20),
+              )
             ],
           ),
         ),
-        Divider(thickness: 2,color: Colors.black,)
       ],
     );
   }

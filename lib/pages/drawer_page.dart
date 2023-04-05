@@ -15,7 +15,7 @@ class _DrawerPageState extends State<DrawerPage> {
       child: Column(
         children: [
           Expanded(
-              flex: 2,
+              flex: 3,
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 color: Colors.blue,
@@ -46,13 +46,17 @@ class _DrawerPageState extends State<DrawerPage> {
               child: Container(
                 child: ListView(
                   children: [
-                    DrawerItem(),
-                    DrawerItem(),
-                    DrawerItem(),
-                    DrawerItem(),
-                    DrawerItem(),
-                    DrawerItem(),
-                    DrawerItem(),
+                    DrawerItem(icon: Icons.person,text: "New Group",),
+                    DrawerItem(icon: Icons.lock,text: "New secret chat",),
+                    DrawerItem(icon: Icons.flash_auto,text:"New Broadcast List"),
+                    Divider(
+                      thickness: 1,
+                      color: Colors.grey,
+                    ),
+                    DrawerItem(icon: Icons.contact_mail,text: "Contact"),
+                    DrawerItem(icon: Icons.person_add,text: "Invite Friends",),
+                    DrawerItem(icon: Icons.settings,text: "Settings",),
+                    DrawerItem(icon: Icons.question_mark,text: "Telegram, FAQ",),
                   ],
                 ),
               )),
